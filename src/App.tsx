@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+
+import Home from './pages/Home';
+import Bio from './pages/Bio';
+import Career from "./pages/Career";
+import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import Audioshire from "./pages/Audioshire";
+import Interests from "./pages/Interests";
+
 import './App.css';
 
-function App() {
+const Application: React.FunctionComponent = (props) => {
+  useEffect(() => {
+    console.log('Application Component Rerender')
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter basename='/'>
+    <Routes>
+      <Route path='home' element={<Home />} />
+      <Route path='bio' element={<Bio />} />
+      <Route path='career' element={<Career />} />
+      <Route path='contactme' element={<Contact />} />
+      <Route path='portfolio' element={<Portfolio />} />
+      <Route path='audioshire' element={<Audioshire />} />
+      <Route path='interests' element={<Interests />} />
+    </Routes>
+   </BrowserRouter>
   );
 }
 
-export default App;
+export default Application;
