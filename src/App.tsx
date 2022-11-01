@@ -18,7 +18,7 @@ const Application: React.FunctionComponent = (props) => {
   return (
    <BrowserRouter basename='/'>
     <Routes>
-      <Route path='home' element={<Home />} />
+      <Route path='/' element={<Home />} />
       <Route path='bio' element={<Bio />} />
       <Route path='career' element={<Career />} />
       <Route path='contactme' element={<Contact />} />
