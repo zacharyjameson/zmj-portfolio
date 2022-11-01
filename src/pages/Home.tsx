@@ -9,7 +9,9 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
   })
 
   return (
-        <HomeBase />
+    <div className='home'>
+      <HomeBase />
+    </div>
   )
 }
 
