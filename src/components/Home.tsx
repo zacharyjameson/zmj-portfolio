@@ -4,10 +4,11 @@ export interface IHomeBaseComponentProps {}
 
 export const HomeBase: React.FunctionComponent<IHomeBaseComponentProps> = () => {
   return (
-    <div>
-      <h1>
+    <div className="wrapper">
+      <h1 className="line__1">
         Hi, I'm Zack Jameson
-        <br />
+      </h1>
+      <h1 className="line__2">
         I'm a Cloud Engineer
       </h1>
       <Link to="/portfolio">
